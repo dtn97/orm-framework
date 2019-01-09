@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{B4D5FF93-D4E7-4094-864C-524AD5F0E8CE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>OOPDPFinalProject</RootNamespace>
+    <AssemblyName>OOP-DP-FinalProject</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.1\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="Npgsql">
+      <HintPath>..\packages\Npgsql.4.0.4\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Google.Protobuf">
+      <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.8.0.13\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ORMFramework\Datatype\DataTypeMapper.cs" />
+    <Compile Include="ORMFramework\Datatype\PostgresDatatypeMapper.cs" />
+    <Compile Include="ORMFramework\DataAnnotations\DataAnnotation.cs" />
+    <Compile Include="ORMFramework\DataAnnotations\Table.cs" />
+    <Compile Include="ORMFramework\DataAnnotations\Column.cs" />
+    <Compile Include="ORMFramework\DataAnnotations\ForeignKey.cs" />
+    <Compile Include="ORMFramework\DataAnnotations\PrimaryKey.cs" />
+    <Compile Include="ORMFramework\DataAnnotations\NotMapper.cs" />
+    <Compile Include="ORMFramework\TableSchema\Column.cs" />
+    <Compile Include="ORMFramework\TableSchema\Table.cs" />
+    <Compile Include="Dummy\HocSinh.cs" />
+    <Compile Include="ORMFramework\DataAnnotations\Required.cs" />
+    <Compile Include="ORMFramework\Session.cs" />
+    <Compile Include="ORMFramework\DataAnnotations\ColumnAnnotation.cs" />
+    <Compile Include="ORMFramework\UnitOfWork.cs" />
+    <Compile Include="ORMFramework\TableModifier\TableModifier.cs" />
+    <Compile Include="ORMFramework\TableModifier\UpdateAction.cs" />
+    <Compile Include="ORMFramework\TableModifier\InsertAction.cs" />
+    <Compile Include="ORMFramework\TableModifier\DeleteAction.cs" />
+    <Compile Include="ORMFramework\SqlAdapter\ISqlAdapter.cs" />
+    <Compile Include="ORMFramework\SqlAdapter\SqlAdapterBase.cs" />
+    <Compile Include="ORMFramework\SqlAdapter\SqlPostgresAdapter.cs" />
+    <Compile Include="ORMFramework\SqlAdapter\SqlServerAdapterBase.cs" />
+    <Compile Include="ORMFramework\LambdaSqlBuilder\Builder\SqlQueryBuilder.cs" />
+    <Compile Include="ORMFramework\LambdaSqlBuilder\Resolver\ExpressionTree\LikeNode.cs" />
+    <Compile Include="ORMFramework\LambdaSqlBuilder\Resolver\ExpressionTree\MemberNode.cs" />
+    <Compile Include="ORMFramework\LambdaSqlBuilder\Resolver\ExpressionTree\Node.cs" />
+    <Compile Include="ORMFramework\LambdaSqlBuilder\Resolver\ExpressionTree\OperationNode.cs" />
+    <Compile Include="ORMFramework\LambdaSqlBuilder\Resolver\ExpressionTree\SingleOperationNode.cs" />
+    <Compile Include="ORMFramework\LambdaSqlBuilder\Resolver\ExpressionTree\ValueNode.cs" />
+    <Compile Include="ORMFramework\LambdaSqlBuilder\Resolver\LambdaResolver.cs" />
+    <Compile Include="ORMFramework\LambdaSqlBuilder\Resolver\LambdaResolverQuery.cs" />
+    <Compile Include="ORMFramework\LambdaSqlBuilder\Resolver\LambdaResolverSpec.cs" />
+    <Compile Include="ORMFramework\LambdaSqlBuilder\Resolver\LambdaResolverTree.cs" />
+    <Compile Include="ORMFramework\LambdaSqlBuilder\SqlLam.cs" />
+    <Compile Include="ORMFramework\LambdaSqlBuilder\SqlLamBase.cs" />
+    <Compile Include="ORMFramework\LambdaSqlBuilder\ValueObjects\LikeMethod.cs" />
+    <Compile Include="Dummy\LopHoc.cs" />
+    <Compile Include="ORMFramework\DataAnnotations\HasOne.cs" />
+    <Compile Include="ORMFramework\DataAnnotations\HasMany.cs" />
+    <Compile Include="ORMFramework\SQLDriver\ISQLDriver.cs" />
+    <Compile Include="ORMFramework\SQLDriver\PostgresDriver.cs" />
+    <Compile Include="ORMFramework\SQLBuilder\SQLBuilder.cs" />
+    <Compile Include="ORMFramework\SQLBuilder\SQLSelection.cs" />
+    <Compile Include="ORMFramework\SQLBuilder\SQLCondition.cs" />
+    <Compile Include="ORMFramework\SQLBuilder\SQLGrouping.cs" />
+    <Compile Include="ORMFramework\SQLBuilder\SQLHaving.cs" />
+    <Compile Include="ORMFramework\SQLBuilder\SQLOrderBy.cs" />
+    <Compile Include="ORMFramework\SQLBuilder\SQLJoin.cs" />
+    <Compile Include="ORMFramework\SQLDriver\MySqlDriver.cs" />
+    <Compile Include="ORMFramework\SQLBuilder\SQLOffsetLimit.cs" />
+    <Compile Include="ORMFramework\DatabaseMapper\DatabaseMapper.cs" />
+    <Compile Include="ORMFramework\DatabaseMapper\PostgresMapper.cs" />
+    <Compile Include="ORMFramework\DatabaseMapper\MySqlMapper.cs" />
+    <Compile Include="ORMFramework\Datatype\MySQLDataTypeMapper.cs" />
+    <Compile Include="ORMFramework\ConfigValue\DBMS.cs" />
+    <Compile Include="ORMFramework\SqlAdapter\SqlMySQLAdapter.cs" />
+    <Compile Include="ORMFramework\DBMSFactory\DBMSAbstractFactory.cs" />
+    <Compile Include="ORMFramework\DBMSFactory\PostgresFactory.cs" />
+    <Compile Include="ORMFramework\DBMSFactory\MySQLFactory.cs" />
+    <Compile Include="ORMFramework\DomainObject.cs" />
+    <Compile Include="ClassGeneration\Hocsinh.cs" />
+    <Compile Include="ClassGeneration\Lophoc.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="ORMFramework\LambdaSqlBuilder\obj\Debug\LambdaSqlBuilder.csprojAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ORMFramework\" />
+    <Folder Include="ORMFramework\TableSchema\" />
+    <Folder Include="ORMFramework\Datatype\" />
+    <Folder Include="ORMFramework\DataAnnotations\" />
+    <Folder Include="Dummy\" />
+    <Folder Include="ORMFramework\TableModifier\" />
+    <Folder Include="ORMFramework\SqlAdapter\" />
+    <Folder Include="ORMFramework\LambdaSqlBuilder\" />
+    <Folder Include="ORMFramework\SQLDriver\" />
+    <Folder Include="ORMFramework\SQLBuilder\" />
+    <Folder Include="ORMFramework\DatabaseMapper\" />
+    <Folder Include="ORMFramework\ConfigValue\" />
+    <Folder Include="ORMFramework\DBMSFactory\" />
+    <Folder Include="ClassGeneration\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

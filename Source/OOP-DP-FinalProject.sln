@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP-DP-FinalProject", "OOP-DP-FinalProject\OOP-DP-FinalProject.csproj", "{B4D5FF93-D4E7-4094-864C-524AD5F0E8CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generator", "Generator\Generator.csproj", "{2F75158F-1500-4203-82FF-15EDC5021A73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4D5FF93-D4E7-4094-864C-524AD5F0E8CE}.Debug|x86.ActiveCfg = Debug|x86
+		{B4D5FF93-D4E7-4094-864C-524AD5F0E8CE}.Debug|x86.Build.0 = Debug|x86
+		{B4D5FF93-D4E7-4094-864C-524AD5F0E8CE}.Release|x86.ActiveCfg = Release|x86
+		{B4D5FF93-D4E7-4094-864C-524AD5F0E8CE}.Release|x86.Build.0 = Release|x86
+		{2F75158F-1500-4203-82FF-15EDC5021A73}.Debug|x86.ActiveCfg = Debug|x86
+		{2F75158F-1500-4203-82FF-15EDC5021A73}.Debug|x86.Build.0 = Debug|x86
+		{2F75158F-1500-4203-82FF-15EDC5021A73}.Release|x86.ActiveCfg = Release|x86
+		{2F75158F-1500-4203-82FF-15EDC5021A73}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
